@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Codeforce Korea",
+    "version": "1.0",
+    "description": "언어의 벽을 깨자",
+    "permissions": [
+      "activeTab",
+      "clipboardRead",
+      "clipboardWrite"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/codeforce.svg",
+        "48": "images/codeforce.svg",
+        "128": "images/codeforce.svg"
+      }
+    }
+  }
+  
